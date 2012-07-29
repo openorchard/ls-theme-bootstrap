@@ -18,7 +18,7 @@
             <ul class="dropdown-menu">
               <li><a href="<?= root_url('profile') ?>">Profile</a></li>
               <li class="divider"></li>
-              <li><a href="<?= root_url('signout') ?>">Sign Out</a></li>
+              <li><a href="<?= root_url('logout') ?>">Log Out</a></li>
             </ul>
           <? endif /*Display for all users regardless of login status */ ?>
           </div><!--Ending login/user button-->
