@@ -32,7 +32,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="<?= root_url('')?>">Home</a></li>
-              <li><a href="<?= root_url('account')?>">About</a></li>
+              <li><a href="<?= root_url('about')?>">About Us</a></li>
               <li><a href="<?= root_url('contact')?>">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
