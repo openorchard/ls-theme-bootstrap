@@ -13,11 +13,13 @@ You should only edit this styling if you *know* you need to, otherwise leave it 
 
 **/
 
-      body {
+      body
+      {
         padding-top: 60px;
         padding-bottom: 40px;
       }
-      .sidebar-nav {
+      .sidebar-nav
+      {
         padding: 9px 0;
       }
 
@@ -27,7 +29,69 @@ End bootstrap styling.
 
 **/
 
+footer
+{
+    margin-top: 5px;
+    padding-top: 5px;
+}
 
+/**
+
+Category page styling
+
+**/
+
+/*===[Category_list]===*/
+
+#product_list
+{
+    list-style: none;
+}
+
+.product_span
+{
+    width: 200px !important;
+     -webkit-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom: 8px;
+    margin-left: 0 !important;
+    margin-right: 8px;
+    text-align: center;
+    display: inline-block;
+}
+
+/*===[Product Page]===*/
+
+.product_form
+{
+    text-align: center;
+}
+
+/**
+
+Utilities
+
+These are snippets of CSS code to either make certain things look better or to
+do liitle bits of work around the site.
+
+**/
+
+/*===[Current Category ]===*/
+
+li.current_category
+{
+    background: #dedede;
+}
+
+.arrow-left
+{
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid blue;
+    display: block;
+}
 
 /*===[On-Off switch style]===*/
 /**
@@ -52,44 +116,52 @@ Pleae do note that IE6-8 do not support the :checked CSS selector.  You will nee
 
 **/
 
-.onoffswitch {
+.onoffswitch
+{
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 
-.onoffswitch-checkbox {
+.onoffswitch-checkbox
+{
     display: none;
 }
 
-.onoffswitch-label {
+.onoffswitch-label
+{
     display: block; overflow: hidden; cursor: pointer;
     border: 2px solid #999999; border-radius: 20px;
 }
 
-.onoffswitch-inner {
+.onoffswitch-inner
+ {
     width: 200%; margin-left: -100%;
     -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
     -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
 }
 
-.onoffswitch-inner > div {
+.onoffswitch-inner > div
+{
     float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
     font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
-.onoffswitch-inner .onoffswitch-active {
+.onoffswitch-inner .onoffswitch-active
+{
     padding-left: 10px;
     background-color: #2FCCFF; color: #FFFFFF;
 }
 
-.onoffswitch-inner .onoffswitch-inactive {
+.onoffswitch-inner .onoffswitch-inactive
+{
     padding-right: 10px;
     background-color: #EEEEEE; color: #999999;
     text-align: right;
 }
 
-.onoffswitch-switch {
+.onoffswitch-switch
+{
     width: 18px; margin: 6px;
     background: #FFFFFF;
     border: 2px solid #999999; border-radius: 20px;
@@ -98,10 +170,12 @@ Pleae do note that IE6-8 do not support the :checked CSS selector.  You will nee
     -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
 }
 
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner
+{
     margin-left: 0;
 }
 
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch
+{
     right: 0px;
 }

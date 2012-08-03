@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <h1><a class="brand"><?= /*This pulls the company name in from the backend as plain-text in the front-end. */ Shop_CompanyInformation::get()->name; ?></a></h1>
+          <h1><a class="brand"><?=Shop_CompanyInformation::get()->name;?> </a></h1>
  <div class="btn-group pull-right hidden-phone">
            <? if (!$this->customer || $this->customer->guest): /*Display the following menu options only if the customer is not logged in. */ ?>
                 <a class="btn" href="<?= root_url('/login') ?>">Login/Register</a>

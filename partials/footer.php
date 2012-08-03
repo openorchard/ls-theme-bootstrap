@@ -14,7 +14,7 @@
         */
       ?>
       
-      <footer class="row-fluid">
+      <footer>
         <div class="span3">
             <p>&copy;&nbsp;<?= Shop_CompanyInformation::get()->name; ?>&nbsp;<?= date('Y') ?></p>
         </div>
@@ -29,6 +29,7 @@
          <a href="<?= root_url('policies/privacy_policy') ?>">Privacy Policy</a><br>
         </div>
         <div class="span3">
+            &nbsp;
         </div>
         <div class="span3">
         <div itemscope itemtype="http://schema.org/LocalBusiness">
