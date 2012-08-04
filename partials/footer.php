@@ -14,7 +14,7 @@
         */
       ?>
       
-      <footer>
+      <footer class="row-fluid">
         <div class="span3">
             <p>&copy;&nbsp;<?= Shop_CompanyInformation::get()->name; ?>&nbsp;<?= date('Y') ?></p>
         </div>
