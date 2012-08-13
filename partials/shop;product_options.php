@@ -5,7 +5,7 @@
     $posted_value = isset($posted_options[$option->option_key]) ? $posted_options[$option->option_key] : null;
   ?>
     <label><?= h($option->name) ?>:</label>
-    <select name="<?= $control_name ?>">
+    <select name="<?= $control_name ?>" onchange="$(this).getForm().sendRequest('on_action', {update: {'product_page': 'product_partial'}})" >
       <?
         $values = $option->list_values();
         foreach ($values as $value):

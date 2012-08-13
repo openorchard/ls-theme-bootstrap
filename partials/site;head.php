@@ -20,6 +20,7 @@
             $this->css_combine(array(
                 'ls_styles',
                 '@css/bootstrap.css',
+                '@css/static.css',
                 '@css/bootstrap-responsive.css',
                 '@css/style.css',
                 ),
@@ -54,18 +55,7 @@
             $this->js_combine(array(
                 'ls_core_jquery',
                 '@js/bootstrap.min.js',
-                '@js/bootstrap-alert.js',
-                '@js/bootstrap-button.js',
-                '@js/bootstrap-carousel.js',
-                '@js/bootstrap-collapse.js',
-                '@js/bootstrap-dropdown.js',
-                '@js/bootstrap-modal.js',
-                '@js/bootstrap-popover.js',
-                '@js/bootstrap-scrollspy.js',
-                '@js/bootstrap-tab.js',
-                '@js/bootstrap-tooltip.js',
-                '@js/bootstrap-transition.js',
-                '@js/bootstrap-typeahead.js',
+                
                 ),
                 array(
                 'src_mode'=>true,

@@ -60,4 +60,3 @@
                 <? endforeach ?>
           </div><!--/row-->
         </div><!--/span-->
-</div><!--/row-->

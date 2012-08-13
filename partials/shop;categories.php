@@ -7,16 +7,14 @@
 ?>
     <ul class="nav nav-list">
         <? foreach ($categories as $category):  ?>
-            <li <? if ($category_url_name == $category->url_name): ?>class="current_category"<? endif ?>>
-                <a href="<?= $category->page_url('/shop/category') ?>">
-                    <? if ($category_url_name == $category->url_name): ?>
-                        <div class="arrow-left"><?= $category->name ?></div>
-                    <? else: ?>
-                        <?= $category->name ?>
-                    <? endif ?>
+            <li>
+                <a <? if ($category_url_name == $category->url_name): ?>class="current_category"<? endif ?> href="<?= $category->page_url('/shop/category') ?>">
+                    <? if ($category_url_name == $category->url_name): ?><i class="icon-chevron-right pull-right"></i><? endif ?>
+                    <?= $category->name ?>
                 </a>
                 <? $this->render_partial('shop:categories', array('parent_category'=>$category)) ?>
             </li>
+            
         <? endforeach; ?>
     </ul>
 <? endif ?>
