@@ -7,7 +7,7 @@
             <div class="row-fluid"><!--This starts the main row for holding content.-->
 <div class="span12">
 <?
-    $this->render_partial('category_sidebar');
+    $this->render_partial('primary_sidebar');
 ?>
 <div class="span6">
 <?

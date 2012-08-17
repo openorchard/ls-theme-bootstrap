@@ -58,16 +58,62 @@ Category and Product page styling
 
 /*===[Product Page]===*/
 
-.product_form
-{
-    text-align: center;
-}
+
 
 .red_scratch
 {
     color: red;
     text-decoration: line-through;
 }
+
+li.product_review
+{
+    list-style: none;
+}
+
+.btn-group.quantity_control .btn
+{
+    vertical-align: top;
+}
+
+/* Hiding the webkit spinner addition with the number type set for consistancy. */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/** Image gallery/zoomer **/
+
+.jcarousel-skin-custom .jcarousel-container-horizontal
+{
+    width: 220px;
+    padding: 0;
+}
+
+.jcarousel-skin-custom .jcarousel-clip-horizontal
+{
+    width:  220px;
+}
+
+.jcarousel-skin-custom .jcarousel-item,
+.jcarousel-skin-custom .jcarousel-item img
+{
+    width: 220px;
+}
+
+.jcarousel-skin-custom .jcarousel-item-horizontal
+{
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.jcarousel-skin-custom .jcarousel-item-placeholder
+{
+  background: #fff;
+  color: #000;
+}
+
 
 /**
 
@@ -81,90 +127,9 @@ do liitle bits of work around the site.
 /*===[Current Category ]===*/
 
 
+/*===[Mini_Cart]===*/
 
-/*===[On-Off switch style]===*/
-/**
-Here is an example HTML setup for using the On-Off switch on the front-end:
-
-
-<div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
-    <label class="onoffswitch-label" for="myonoffswitch">
-        <div class="onoffswitch-inner">
-            <div class="onoffswitch-active">ON</div>
-            <div class="onoffswitch-inactive">OFF</div>
-        </div>
-        <div class="onoffswitch-switch"></div>
-    </label>
-</div>
-
-
-If you wish to create your own switch style, you can visit   http://proto.io/freebies/onoff/   where this style was generated and make your own.
-
-Pleae do note that IE6-8 do not support the :checked CSS selector.  You will need some extra javascript to make this work, but it is up to you to find and apply that javascript.
-
-**/
-
-.onoffswitch
+.mini_cart
 {
-    position: relative; width: 90px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-}
-
-.onoffswitch-checkbox
-{
-    display: none;
-}
-
-.onoffswitch-label
-{
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #999999; border-radius: 20px;
-}
-
-.onoffswitch-inner
- {
-    width: 200%; margin-left: -100%;
-    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
-    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
-}
-
-.onoffswitch-inner > div
-{
-    float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-}
-
-.onoffswitch-inner .onoffswitch-active
-{
-    padding-left: 10px;
-    background-color: #2FCCFF; color: #FFFFFF;
-}
-
-.onoffswitch-inner .onoffswitch-inactive
-{
-    padding-right: 10px;
-    background-color: #EEEEEE; color: #999999;
-    text-align: right;
-}
-
-.onoffswitch-switch
-{
-    width: 18px; margin: 6px;
-    background: #FFFFFF;
-    border: 2px solid #999999; border-radius: 20px;
-    position: absolute; top: 0; bottom: 0; right: 56px;
-    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
-    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner
-{
-    margin-left: 0;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch
-{
-    right: 0px;
+    text-align: center;
 }
