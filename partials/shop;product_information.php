@@ -1,6 +1,6 @@
     <ul id="tabs" class="nav nav-tabs">
-        <li class="active"><a href="#" name="tab1">Description</a></li>
-        <li><a href="#" name="tab2">Attributes</a></li>
+        <li class="active"><a href="#" data-tab="tab1">Description</a></li>
+        <li><a href="#" data-tab="tab2">Attributes</a></li>
     </ul>
 
     <script>
@@ -39,7 +39,7 @@ $("#tabs li").click(function() {
         $("#content .wrapper").hide(); //Hide all content
         $("#tabs li").attr("id",""); //Reset id's
         $(this).parent().attr("id","current"); // Activate this
-        $('#' + $(this).attr('name')).fadeIn(); // Show content for current tab
+        $('#' + $(this).attr('data-tab')).fadeIn(); // Show content for current tab
         }
     });
 });

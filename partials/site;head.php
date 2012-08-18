@@ -50,10 +50,9 @@
         ?>
 
           <!--Javascript stuff-->
-          <!--This is calling jquery from Google's CDN.  It will be replaced with an in-theme minified jquery at some point before release.-->
-          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
         <?=
             $this->js_combine(array(
+                '@js/jquery-1.8.js',
                 'ls_core_jquery',
                 '@js/bootstrap.min.js',
                 '@js/jquery.jcarousel.min.js',

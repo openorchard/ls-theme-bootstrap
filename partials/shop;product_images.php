@@ -7,12 +7,12 @@
     $images = $product->om('images', $posted_options);
 ?>
   <!--
-    For consistancy the images up to always use the carousel styling.
+    For consistancy the images always use the carousel styling.
   -->
 <? if ($images->count): ?>
   <ul class="product_images carousel jcarousel-skin-custom span6">
     <? foreach ($images as $image): ?>
-      <li><a title="<?= h($image->title) ?>" class="gallery_image" rel="product_image" href="<?= $image->getThumbnailPath(500, 'auto') ?>"><img src="<?= $image->getThumbnailPath(220, 'auto') ?>" alt="" width="220"/></a></li>
+      <li><a title="<?= h($image->title) ?>" class="gallery_image" href="<?= $image->getThumbnailPath(500, 'auto') ?>"><img src="<?= $image->getThumbnailPath(220, 'auto') ?>" alt="" width="220"/></a></li>
     <? endforeach ?>
   </ul>
     <!--

@@ -5,7 +5,7 @@
 
 <div class="box base-mini mini-cart" style="text-align: center;">
     <div class="head">
-                <h4> &nbsp;<a href="<?= root_url('shop/cart') ?>">My Cart</a></h4>
+                <h4> &nbsp;<a href="<?= root_url('shop/cart') ?>"><? if (!$this->customer || $this->customer->guest):; echo 'My'; else:; echo $this->customer->name.'\'s'; endif ?>&nbsp;Cart</a></h4>
     </div>
     <div class="actions">
 		<p>There are <strong><?= $total_qty ?> item<? if($total_qty>1) echo 's' ?></strong> in your cart.</p>
