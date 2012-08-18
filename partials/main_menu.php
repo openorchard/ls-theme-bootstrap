@@ -35,7 +35,7 @@
                 <? endif /*Display for all users regardless of login status */ ?>
                 </div><!--Ending login/user button-->
 
-                <form class="pull-right hidden-phone input-append">
+                <form class="pull-right hidden-phone input-append" action="/search">
                   <input id="appendedInputButton" class="search-query" type="text" name="query" value="<?= isset($query) ? $query : null ?>" placeholder="Search here...">
                   <button class="btn btn-search" type="submit" name="records" value="999"><i class="icon-search"></i>&nbsp;Search</button>
                 </form>

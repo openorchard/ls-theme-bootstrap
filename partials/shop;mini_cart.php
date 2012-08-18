@@ -10,7 +10,7 @@
     <div class="actions">
 		<p>There are <strong><?= $total_qty ?> item<? if($total_qty>1) echo 's' ?></strong> in your cart.</p>
 		<p class="subtotal">Cart Subtotal <strong><span class="price"><?= format_currency($total) ?></span></strong></p>
-		<button class="btn btn-info" type="button" onclick="location.href='<?= site_url('/checkout-start') ?>'"><span>Checkout</span></button>
+		<button class="btn btn-info" type="button" onclick="location.href='<?= root_url('/shop/checkout') ?>'"><span>Checkout</span></button>
 	</div><!-- end .actions -->
 	<h5>Recently added items</h5>
 	<ol id="cart-sidebar">

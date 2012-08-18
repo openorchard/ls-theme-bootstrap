@@ -6,7 +6,7 @@
         *    item from the OM for the selected option.
         *
         *
-        *   IMPORTANT NOTICE:
+        *   IMPORTANT:
         *       If you make a partial (such as the images and stock/pricing partial) you
         *       will need to add the $posted_options variable to the top of those as well!
     **/
@@ -19,12 +19,27 @@
             <h2 class="span12"><?= $product->name ?></h2>
                 <br><br><br><!--These breaks are needed since the alignment is off due to the use of jcarousel within Bootstrap and I'm too lazy to *really* fix it.-->
                     <?=
+                        /*
+                            This section really needs to be cleaned, will get around to it in a later release.
+                        */
                         $this->render_partial('shop:product_images');
+                        echo '<hr>
+                                    <div class="row-fluid">
+                                        <div class="span6">';
                         $this->render_partial('shop:product_options');
-                        echo '<br>';
+                        echo '</div> <div class="span6">';
                         $this->render_partial('shop:product_extra_options');
+                        echo '</div>
+                                </div><!--Ending fluid row for options-->
+                                <hr>
+                                <div class="row-fluid">
+                                    <div class="span6">';
                         $this->render_partial('shop:product_stock_pricing');
+                        echo '</div>
+                                    <div class="span6">';
                         $this->render_partial('shop:product_add_to_cart');
+                        echo '</div>
+                                    </div><!--Ending fluid row for add to cart-->';
                     ?>
         </form>
     </div><!--Ending the span for the product form-->

@@ -32,7 +32,7 @@
                         </div>
                         <div class="span4 offset 3">
                           <input class="btn btn-primary btn-large" type="submit" value="Checkout" name="set_coupon_code"/>
-                          <input type="hidden" name="redirect" value="/checkout_start"/>
+                          <input type="hidden" name="redirect" value="<?= root_url('shop/checkout') ?>"/>
                         </div>
             </div><!--Ending span9 for cupon code input and fine print.-->
   </form>

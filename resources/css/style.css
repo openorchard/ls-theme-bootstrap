@@ -45,7 +45,7 @@ Category and Product page styling
 
 .product_span
 {
-    width: 200px !important;
+    width: 200px !important; /* Sadly the !important is necessary since the media queries in Bootstrap override a width without it. */
      -webkit-border-radius: 20px;
     border-radius: 20px;
     border: 1px solid rgba(0,0,0,0.3);
@@ -115,6 +115,20 @@ input::-webkit-inner-spin-button {
 }
 
 
+/*===[Checkout]===*/
+
+/*==[Progress Meter]==*/
+.checkout_progress li
+{
+    list-style: none;
+    font-size: 1.3em;
+}
+
+.checkout_progress li.current
+{
+    background: #dedede;
+}
+
 /**
 
 Utilities
@@ -124,8 +138,12 @@ do liitle bits of work around the site.
 
 **/
 
-/*===[Current Category ]===*/
+/*===[Forms]===*/
 
+.form-center
+{
+    text-align: center;
+}
 
 /*===[Mini_Cart]===*/
 
