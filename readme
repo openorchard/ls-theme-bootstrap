@@ -4,6 +4,8 @@ This is a basic theme using the Twitter Bootstrap framework for the Lemonstand e
 
 Currently it is *almost* complete.  It just needs to get a compare list and be thoroughly tested.
 
-The code does need to be cleaned up in some areas.
+The code does need to be cleaned up in some areas due to a rush to complete I didn't comment well in some areas (if at all) and also did not apply proper formatting.
 
-Using Bootstrap from 2.1.0 Whip currently.
+Using Bootstrap from 2.1.0.
+
+Demo setup available at http://dev.jonathan.garbee.me for now.
