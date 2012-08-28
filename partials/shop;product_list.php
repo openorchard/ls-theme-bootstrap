@@ -1,18 +1,18 @@
 <?
-/**
+/*
 
 This displays an unordered list of products from the category.
 It sets up a list item for each product, within that list item it pulls in the name and image of the item (as a link to the product page) and finally the base price.
 The image is 150px by 150px in size and retrieved from the Option Matrix.
 
-**/
+*/
 ?>
 <?
-    /**
+    /*
         This block of code activates pagination in the list that is outputed.
         If you don't want pagination, remove this and the related code on the
         category page that sets up pagination.
-    **/
+    */
   if (isset($paginate) && $paginate)
   {
     $page_index = isset($page_index) ? $page_index-1 : 0;
@@ -39,17 +39,28 @@ The image is 150px by 150px in size and retrieved from the Option Matrix.
             if ($image_url):
         ?>
         <img src="<?= $image_url ?>" alt="<?= h($product->name) ?>"/>
-    </a>
-    <br>
       <? endif ?>
+      <br>
+      </a>
       <?= format_currency($product->price()) ?>
+      <br>
+        <a href="#"
+           class="btn btn-info btn-mini"
+           onclick="return $(this).getForm().sendRequest('shop:on_addToCompare', {
+                onSuccess: function(){alert('The product has been added to the compare list')},
+                extraFields: {product_id: '<?= $product->id ?>'},
+                update: {compare_list: 'shop:compare_list'}
+            });">
+          Add to compare
+        </a>
     </li>
   <? endforeach ?>
+  <div class="clearfix"></div><!--Sadly a necessary evil for the time until I figure out how to make a UL have a height with floating li elements.-->
 </ul>
         <? if ($pagination): ?>
                 <div class="span12 pagination pagination-centered">
                     <? $this->render_partial('pagination', array('pagination'=>$pagination, 'base_url'=>$pagination_base_url)); ?>
                 <br>
                 </div>
-                
+
         <? endif ?>
