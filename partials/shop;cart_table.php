@@ -16,15 +16,16 @@
   <? else: ?>
   <?
     foreach ($items as $item):
-    $image_url = $item->product->image_url(0, 60, 'auto');
+    $images = $item->om('images');
+    $image_url = $images->count ? $images[0]->getThumbnailPath(60, 100) : null;
     $options_str = $item->options_str();
   ?>
     <tr>
       <td>
         <? if ($image_url): ?>
-          <img src="<?= $image_url ?>" alt="<?= h($item->product->name) ?>"/>
+          <img src="<?= $image_url ?>" alt="<?= h($item->product->name) ?>" height="100" width="60"/>
         <? endif ?>
-        <strong><?= h($item->product->name) ?></strong>
+        <strong><a href="<?= $item->product->page_url('shop/product') ?>"><?= h($item->product->name) ?></a></strong>
         <? if (strlen($options_str)): ?>
           <br/><?= h($options_str) ?>.
         <? endif ?>

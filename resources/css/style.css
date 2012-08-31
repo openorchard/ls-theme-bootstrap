@@ -13,20 +13,13 @@ Custom Navbar settings
 
 .navbar h1
 {
-    font-size: 1em;
+    font-size: 20px;
     line-height: 1em;
 }
 
-
-/**
-
-Category List
-
-**/
-
-a.current_category
+.navbar form
 {
-    background: #dedede;
+    margin: 0;
 }
 
 
@@ -41,6 +34,7 @@ Category and Product page styling
 #product_list
 {
     list-style: none;
+    height: 100%;
 }
 
 .product_span
@@ -80,7 +74,7 @@ li.product_review
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0; /*  Apparently some margin are still there even though it's hidden */
 }
 
 /** Image gallery/zoomer **/
@@ -112,21 +106,6 @@ input::-webkit-inner-spin-button {
 {
   background: #fff;
   color: #000;
-}
-
-
-/*===[Checkout]===*/
-
-/*==[Progress Meter]==*/
-.checkout_progress li
-{
-    list-style: none;
-    font-size: 1.3em;
-}
-
-.checkout_progress li.current
-{
-    background: #dedede;
 }
 
 /**

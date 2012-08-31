@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <!-- The fav and touch icons -->
-    <link rel="shortcut icon" href="<?= theme_resource_url('icons/favicon.ico') ?>">
+    <link rel="shortcut icon" href="<?= theme_resource_url('icons/favicon.ico') ?>"><!--You may also want to throw your favicon into the root folder, that way you error log for apache won't get loaded with failures from the backend.-->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= theme_resource_url('icons/apple-touch-icon-144-precomposed.png') ?>">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= theme_resource_url('icons/apple-touch-icon-114-precomposed.png') ?>">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= theme_resource_url('icons/apple-touch-icon-72-precomposed.png') ?>">
@@ -54,7 +54,7 @@
             $this->js_combine(array(
                 '@js/jquery-1.8.js',
                 'ls_core_jquery',
-                '@js/bootstrap.min.js',
+                '@js/bootstrap.js',
                 '@js/jquery.jcarousel.min.js',
                 '@js/jquery.fancybox-1.3.4.pack.js',
                 '@js/jquery.livequery.js',
@@ -86,4 +86,6 @@
 
 
   </head>
+  <!--This would be a good place to use php's flush to increase first byte time and general loading speed of other pages. ex. <?php /* flush(); */ ?>
+  For more information see: http://www.php.net/manual/en/function.flush.php  and  http://developer.yahoo.com/performance/rules.html#flush  -->
   <body>

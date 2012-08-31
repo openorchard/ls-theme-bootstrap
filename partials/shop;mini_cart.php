@@ -5,7 +5,7 @@
 
 <div class="box base-mini mini-cart" style="text-align: center;">
     <div class="head">
-                <h4> &nbsp;<a href="<?= root_url('shop/cart') ?>"><? if (!$this->customer || $this->customer->guest):; echo 'My'; else:; echo $this->customer->name.'\'s'; endif ?>&nbsp;Cart</a></h4>
+                <h4> &nbsp;<a href="<?= root_url('shop/cart') ?>"><? if (!$this->customer || $this->customer->guest):; echo 'My'; else:; echo $this->customer->name.'\'s'; endif ?>&nbsp;Cart</a></h4><!--This line is going to check for a customer presence, if it is a guest it will display My or if it is a customer it will grab their name from the database.  Just a little personal touch to the interface.-->
     </div>
     <div class="actions">
 		<p>There are <strong><?= $total_qty ?> item<? if($total_qty>1) echo 's' ?></strong> in your cart.</p>

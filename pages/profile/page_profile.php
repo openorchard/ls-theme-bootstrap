@@ -1,22 +1,14 @@
 <div class="span9">
-    <ul id="tabs" class="nav nav-tabs">
+
+    <ul id="myTab" class="nav nav-tabs">
         <li class="active">
-            <a href="#" data-tab="tab1">Account Details</a>
+            <a href="#main_details" data-toggle="tab">Account Details</a>
         </li>
-        <li><a href="#" data-tab="tab2">Orders</a></li>
+        <li><a href="#orders" data-toggle="tab">Orders</a></li>
     </ul>
-        <script>
-            // On li click
-                $("#tabs li").click(function() {
-            // Reset them
-                $("#tabs li").removeClass("active");
-            // Add to the clicked one only
-                $(this).addClass("active");
-            });
-        </script>
     
-    <div id="content">
-        <div id="tab1" class="wrapper">
+    <div class="tab-content">
+        <div id="main_details" class="tab-pane active">
             <h2>Change Password</h2>
                 <hr>
                 <?= open_form(array('class'=>'form-inline')) ?>
@@ -34,31 +26,18 @@
                 </form> 
             
         </div>
-        <div id="tab2" class="wrapper">
+        <div class="tab-pane" id="orders">
             <?= $this->render_partial('account:orders') ?>
         </div>
     </div>
-
     <script>
-    $(document).ready(function() {
-    $("#content .wrapper").hide(); // Initially hide all content
-    $("#tabs li:first").attr("id","current"); // Activate first tab
-    $("#content .wrapper:first").fadeIn(); // Show first tab content
+    $('#myTab a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+    })
 
-    $('#tabs a').click(function(e) {
-        e.preventDefault();
-        if ($(this).closest("li").attr("id") == "current"){ //detection for current tab
-         return
-        }
-        else{
-        $("#content .wrapper").hide(); //Hide all content
-        $("#tabs li").attr("id",""); //Reset id's
-        $(this).parent().attr("id","current"); // Activate this
-        $('#' + $(this).attr('data-tab')).fadeIn(); // Show content for current tab
-        }
-    });
-});
-    </script>
-    
-    
+$(function () {
+$('#myTab a:first').tab('show');
+})
+</script>
 </div><!--Ending span9 for content-->

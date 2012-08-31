@@ -25,10 +25,9 @@ The image is 150px by 150px in size and retrieved from the Option Matrix.
   $products = $products instanceof Db_ActiveRecord ? $products->find_all() : $products;
 ?>
 
-
-<ul id="product_list" class="category_list">
+ <?= open_form() ?>
+<ul id="product_list">
   <? foreach ($products as $product): ?>
-
     <li class="product_span">
       <a href="<?=  $product->page_url('/shop/product') ?>">
         <?= h($product->name) ?>
@@ -38,7 +37,7 @@ The image is 150px by 150px in size and retrieved from the Option Matrix.
             $image_url = $images->count ? $images[0]->getThumbnailPath(150, 150) : null;
             if ($image_url):
         ?>
-        <img src="<?= $image_url ?>" alt="<?= h($product->name) ?>"/>
+        <img src="<?= $image_url ?>" alt="<?= h($product->name) ?>" width="150" height="150"/>
       <? endif ?>
       <br>
       </a>
@@ -53,10 +52,11 @@ The image is 150px by 150px in size and retrieved from the Option Matrix.
             });">
           Add to compare
         </a>
+        <div class="clearfix"></div><!--Sadly a necessary evil for the time until I figure out how to make a UL have a height with floating li elements.-->
     </li>
   <? endforeach ?>
-  <div class="clearfix"></div><!--Sadly a necessary evil for the time until I figure out how to make a UL have a height with floating li elements.-->
 </ul>
+<?= close_form() ?>
         <? if ($pagination): ?>
                 <div class="span12 pagination pagination-centered">
                     <? $this->render_partial('pagination', array('pagination'=>$pagination, 'base_url'=>$pagination_base_url)); ?>
@@ -64,3 +64,4 @@ The image is 150px by 150px in size and retrieved from the Option Matrix.
                 </div>
 
         <? endif ?>
+
