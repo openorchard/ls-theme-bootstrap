@@ -58,10 +58,8 @@ The image is 150px by 150px in size and retrieved from the Option Matrix.
 </ul>
 <?= close_form() ?>
         <? if ($pagination): ?>
-                <div class="span12 pagination pagination-centered">
+                <div class="span12">
                     <? $this->render_partial('pagination', array('pagination'=>$pagination, 'base_url'=>$pagination_base_url)); ?>
-                <br>
                 </div>
-
         <? endif ?>
 

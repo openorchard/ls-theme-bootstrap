@@ -19,8 +19,8 @@
                 'paginate'=>true,
                 'pagination_base_url'=>$category->page_url('shop/category'),
                 'page_index'=>$this->request_param(1, 0)
+                /*NOTE: If you are using Nested Category URL's, set the 1 to -1 in the line above.*/
             )) ?>
         <? endif ?>
-
     </div>
 </div>
