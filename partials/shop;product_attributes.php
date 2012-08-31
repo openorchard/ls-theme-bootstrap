@@ -20,6 +20,6 @@
       </tr>
     <? endforeach ?>
   </table>
-<? elseif ?>
+<? else: ?>
 <p>Sorry, but there are no attributes currently available for this product.</p>
 <? endif ?>
