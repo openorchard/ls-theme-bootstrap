@@ -2,7 +2,7 @@ ls-theme-bootstrap
 
 This is a basic theme using the Twitter Bootstrap framework for the Lemonstand ecommerce system.
 
-Currently at version 1.1.
+Currently at version 1.2.
 
 The code does need to be cleaned up in some areas due to a rush to complete I didn't comment well in some areas (if at all) and also did not apply proper formatting.
 

@@ -1,12 +1,10 @@
-<div class="span9">
-
     <ul id="myTab" class="nav nav-tabs">
         <li class="active">
             <a href="#main_details" data-toggle="tab">Account Details</a>
         </li>
         <li><a href="#orders" data-toggle="tab">Orders</a></li>
     </ul>
-    
+
     <div class="tab-content">
         <div id="main_details" class="tab-pane active">
             <h2>Change Password</h2>
@@ -23,8 +21,8 @@
                         <input class="span4" id="password_confirm" type="password" name="password_confirm"/><br/>
                         <br>
                         <input class="btn btn-primary" type="submit" name="change_password" value="Submit"/>
-                </form> 
-            
+                </form>
+
         </div>
         <div class="tab-pane" id="orders">
             <?= $this->render_partial('account:orders') ?>
@@ -40,4 +38,3 @@ $(function () {
 $('#myTab a:first').tab('show');
 })
 </script>
-</div><!--Ending span9 for content-->

@@ -8,7 +8,7 @@
         of <strong><?= $pagination->getRowCount() ?></strong> records.
     </span>
         <ul class="pagination pagination-centered">
-            <? if ($curPageIndex): ?><a href="<?= $base_url.'/'.$curPageIndex.$suffix ?>">&larr; Previous</a><? endif ?>
+            <? if ($curPageIndex): ?><li><a href="<?= $base_url.'/'.$curPageIndex.$suffix ?>">&larr; Previous</a></li><? endif ?>
             <? for ($i = 1; $i <= $pageNumber; $i++): ?>
 
                 <? if ($i != $curPageIndex+1): ?>
@@ -28,6 +28,6 @@
                     </li>
                 <? endif ?>
                 <? endfor ?>
-            <? if ($curPageIndex < $pageNumber-1): ?><a href="<?= $base_url.'/'.($curPageIndex+2).$suffix ?>">Next page &rarr;</a><? endif ?>
+            <? if ($curPageIndex < $pageNumber-1): ?><li><a href="<?= $base_url.'/'.($curPageIndex+2).$suffix ?>">Next page &rarr;</a></li><? endif ?>
         </ul>
 <!--Ending Pagination-->

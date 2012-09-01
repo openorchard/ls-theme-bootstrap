@@ -1,4 +1,4 @@
-<div id="product_page" class="span9">
+<div id="product_page">
 <? if ($product_unavailable): ?>
   <h2>We are sorry, product unavailable.</h2>
 <? elseif(!$product): ?>

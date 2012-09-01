@@ -1,4 +1,3 @@
-<div class="span9">
 <h2>Compare Products</h2>
 
 <?= open_form() ?>
@@ -16,7 +15,7 @@
                 if ($image_url != null): ?>
                 <img src="<?= $image_url ?>" alt="<?= h($product->name) ?>"/>
               <? endif ?>
-              
+
               <h3><a href="<?= $product->page_url('shop/product') ?>"><?= h($product->name) ?></a></h3>
             </td>
           <? endforeach ?>
@@ -29,7 +28,7 @@
               $is_on_sale = $product->is_on_sale();
           ?>
             <td>
-              <strong">
+              <strong>
                 <?= format_currency($product->om('price')) ?>
               </strong>
               <? if ($is_on_sale): ?>
@@ -64,7 +63,7 @@
           <td>&nbsp;</td>
           <? foreach ($products as $product): ?>
           <td class="product">
-          <input 
+          <input
             class="btn btn-primary"
             onclick="return $(this).getForm().sendRequest(
             'shop:on_addToCart', {
@@ -87,4 +86,3 @@
     </table>
   <? endif ?>
 </form>
-</div><!--Ending span9 for content-->

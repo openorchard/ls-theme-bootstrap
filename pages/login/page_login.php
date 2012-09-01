@@ -1,5 +1,4 @@
-<div class="span9">
-    <div class="span5 offset1">
+    <div class="span6">
         <h3>Login</h3>
         <br>
             <?= open_form(array('class'=>'form-inline row-fluid')) ?>
@@ -16,7 +15,7 @@
             </form>
     </div><!--Ending span for login area-->
 
-    <div class="span5 offset1">
+    <div class="span6">
         <h3>Register with us.</h3>
         <br>
             <?= open_form(array('class'=>'form-inline row-fluid')) ?>
@@ -48,4 +47,3 @@
             </form>
 
     </div><!--Ending span for register area-->
-</div><!--Ending span9 for the content area.-->

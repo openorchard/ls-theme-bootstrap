@@ -1,4 +1,3 @@
-<div class="span9">
     <div id="category-page">
 <?
     /*
@@ -23,4 +22,3 @@
             )) ?>
         <? endif ?>
     </div>
-</div>

@@ -1,15 +1,14 @@
-<div class="span9">
 <h2>Order</h2>
 <? if (!$order): ?>
   <h3>Order not found</h3>
-<? else: ?>  
+<? else: ?>
   <p>
     Order # <?= $order->id ?><br/>
     Order Date: <?= h($order->order_datetime->format('%x')) ?><br/>
     Total: <?= format_currency($order->total) ?><br/>
     Status: <?= h($order->status->name) ?>
   </p>
-  
+
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
@@ -46,7 +45,7 @@
       <? endforeach ?>
     <tbody>
   </table>
-  
+
   <p>
     Subtotal: <?= format_currency($order->subtotal) ?><br/>
     Discount: <?= format_currency($order->discount) ?><br/>
@@ -56,7 +55,7 @@
       <br/>Shipping tax: <?= format_currency($order->shipping_tax) ?>
     <? endif ?>
   </p>
-  
+
   <h3>Total:<strong> <?= format_currency($order->total) ?></strong></h3>
     <? if($order->payment_method->has_payment_form() && !$order->payment_processed()): ?>
       <a class="btn btn-primary" href="<?= root_url('shop/checkout/pay/'. $order->order_hash) ?>">Pay</a>
@@ -65,4 +64,3 @@
     <a href="/orders">Return to the order list</a>
   </p>
 <? endif ?>
-</div><!--Ending span9 for content-->
