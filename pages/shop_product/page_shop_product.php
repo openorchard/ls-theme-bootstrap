@@ -1,4 +1,4 @@
-<div id="product_page">
+<div id="product_page" itemscope itemtype="http://schema.org/Product">
 <? if ($product_unavailable): ?>
   <h2>We are sorry, product unavailable.</h2>
 <? elseif(!$product): ?>

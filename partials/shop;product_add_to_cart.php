@@ -15,14 +15,17 @@
                      <a href="#" class="arrow down btn"><i class="icon-arrow-down"></i></a>
                 </div><!--Ending button group controls for the quantity.-->
             </div><!--Ending the entire quantity control container-->
-            <a href="#"
-               class="button_control btn btn-primary btn-large"
+            <button
+               class="button_control btn btn-primary btn-large btn-block"
                onclick="return $(this).getForm().sendRequest('shop:on_addToCart', {
                    onAfterUpdate: init_effects,
                    update: {
                       'product_page': 'product_partial',
                       'mini_cart': 'shop:mini_cart'
-                    }
+                    },
+                    onSuccess: function() {
+            site.message.addToCart($('[name=product_cart_quantity]').val());
+          },
                   })">
                 Add to cart
-            </a>
+            </button>

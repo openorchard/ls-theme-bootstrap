@@ -1,6 +1,5 @@
     <h2><? if (!$this->customer || $this->customer->guest):; echo 'My'; else:; echo $this->customer->name.'\'s'; endif ?>&nbsp;Cart</h2>
     <hr>
-    <?= flash_message() ?>
     <?
         $active_items = Shop_Cart::list_active_items();
         $postponed_items = Shop_Cart::list_postponed_items();

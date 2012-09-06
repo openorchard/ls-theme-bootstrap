@@ -1,4 +1,4 @@
-<div class="row-fluid"><!--Starting fluid row for product ratings/review.-->
+<div id="product_reviews" class="row-fluid"><!--Starting fluid row for product ratings/review.-->
     <div class="span6">
         Product rating: <?= $product->rating_all ? $product->rating_all : '(no rating information)' ?>&nbsp;Stars
         <br>
@@ -61,7 +61,7 @@
                             value="Submit" 
                             onclick="return $(this).getForm().sendRequest('shop:on_addProductReview', {
                                     extraFields: {no_flash: true}, 
-                                    update:{'product_page': 'product_partial'}
+                                    update:{'product_reviews': 'shop:product_reviews'}
                                 })"/>
                     </form>
                     <? endif ?>

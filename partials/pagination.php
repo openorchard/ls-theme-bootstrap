@@ -7,7 +7,8 @@
         Showing:  <strong><?= ($pagination->getFirstPageRowIndex()+1).'-'.($pagination->getLastPageRowIndex()+1) ?></strong>
         of <strong><?= $pagination->getRowCount() ?></strong> records.
     </span>
-        <ul class="pagination pagination-centered">
+    <div  class="pagination pagination-centered">
+        <ul>
             <? if ($curPageIndex): ?><li><a href="<?= $base_url.'/'.$curPageIndex.$suffix ?>">&larr; Previous</a></li><? endif ?>
             <? for ($i = 1; $i <= $pageNumber; $i++): ?>
 
@@ -30,4 +31,5 @@
                 <? endfor ?>
             <? if ($curPageIndex < $pageNumber-1): ?><li><a href="<?= $base_url.'/'.($curPageIndex+2).$suffix ?>">Next page &rarr;</a></li><? endif ?>
         </ul>
+    </div>
 <!--Ending Pagination-->

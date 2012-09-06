@@ -16,7 +16,7 @@
 <div class="row-fluid">
     <div class="span6">
         <form class="product_form row-fluid">
-            <h2 class="span12"><?= $product->name ?></h2>
+            <h2 class="span12" itemprop="name"><?= $product->name ?></h2>
                 <br><br><br><!--These breaks are needed since the alignment is off due to the use of jcarousel within Bootstrap and I'm too lazy to *really* fix it.-->
                     <?=
                         /*

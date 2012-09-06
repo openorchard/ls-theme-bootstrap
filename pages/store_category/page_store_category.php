@@ -1,4 +1,4 @@
-    <div id="category-page">
+<div id="category-page">
 <?
     /*
         This will check for a category first, if one is not found then it displays an error message.

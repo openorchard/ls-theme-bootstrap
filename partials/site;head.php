@@ -7,6 +7,8 @@
     <meta name="description" content="<?= $this->page->description ?>">
     <meta name="author" content="">
 
+
+
     <!-- The fav and touch icons -->
     <link rel="shortcut icon" href="<?= theme_resource_url('icons/favicon.ico') ?>"><!--You may also want to throw your favicon into the root folder, that way you error log for apache won't get loaded with failures from the backend.-->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= theme_resource_url('icons/apple-touch-icon-144-precomposed.png') ?>">
@@ -19,10 +21,10 @@
         <?=
             $this->css_combine(array(
                 'ls_styles',
-                '@css/bootstrap.css',
                 '@css/static.css',
-                '@css/bootstrap-responsive.css',
+                '@css/bootstrap.css',
                 '@css/jquery.fancybox-1.3.4.css',
+                '@css/jbar.css',
                 '@css/style.css',
                 ),
             array(
@@ -59,6 +61,9 @@
                 '@js/jquery.fancybox-1.3.4.pack.js',
                 '@js/jquery.livequery.js',
                 '@js/jquery.placeholder.js',
+                '@js/sprintf-0.7-beta1.js',
+                '@js/jquery.bar.js',
+                '@js/notifications.js',
                 '@js/global.js'
 
                 ),

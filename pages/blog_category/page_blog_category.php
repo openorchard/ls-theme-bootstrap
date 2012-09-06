@@ -3,7 +3,7 @@
 
   <?
     $pagination = $posts->paginate($this->request_param(1, 1)-1, 2);
-    $post_list = $posts->find_all();  
+    $post_list = $posts->find_all();
   ?>
   <ul>
     <? foreach ($post_list as $post): ?>
@@ -19,9 +19,7 @@
     </li>
   <? endforeach ?>
   </ul>
-<div class="span12 pagination pagination-centered">
   <? $this->render_partial('pagination', array('pagination'=>$pagination, 'base_url'=>'/blog/category/'.$category->url_name)) ?>
-</div>
 <? else: ?>
   <h2>Category not found</h2>
 <? endif ?>

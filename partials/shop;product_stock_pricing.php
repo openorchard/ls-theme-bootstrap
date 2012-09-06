@@ -18,13 +18,15 @@
                 <? endif ?>
         </p>
     <? endif ?>
-  
-    <p <? /** If product is on sale, add a class. **/ if ($is_discounted = $product->om('is_on_sale')): ?> class="red_scratch" <? endif ?>>Price: <?= format_currency($product->om('price', $posted_options)); ?></p>
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+  <meta itemprop="currency" content="USD">
+    <p <? /** If product is on sale, add a class. **/ if ($is_discounted = $product->om('is_on_sale')): ?> class="red_scratch" <? endif ?>>Price: <span <? if (!$is_discounted = $product->om('is_on_sale')): echo 'itemprop="price"'; endif ?>><?= format_currency($product->om('price', $posted_options)); ?></span></p>
     <? 
         /**
         *    If product is on sale, then show a sale price.
         **/
         if ($is_discounted = $product->om('is_on_sale')): 
     ?>
-       <p>Sale price: <?= format_currency($product->om('sale_price')); ?> </p>
+       <p>Sale price:<span itemprop="price"><?= format_currency($product->om('sale_price')); ?></span></p>
     <? endif ?>
+  </div>
