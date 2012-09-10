@@ -1,4 +1,4 @@
-    <?
+<?
         /*
         You will **need** to change the mailto: address in the form's action in order for this form to work properly.
 

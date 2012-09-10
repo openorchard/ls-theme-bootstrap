@@ -1,4 +1,4 @@
-    <h2><? if (!$this->customer || $this->customer->guest):; echo 'My'; else:; echo $this->customer->name.'\'s'; endif ?>&nbsp;Cart</h2>
+<h2><? if (!$this->customer || $this->customer->guest):; echo 'My'; else:; echo $this->customer->name.'\'s'; endif ?>&nbsp;Cart</h2>
     <hr>
     <?
         $active_items = Shop_Cart::list_active_items();

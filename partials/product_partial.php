@@ -16,31 +16,28 @@
 <div class="row-fluid">
     <div class="span6">
         <form class="product_form row-fluid">
-            <h2 class="span12" itemprop="name"><?= $product->name ?></h2>
-                <br><br><br><!--These breaks are needed since the alignment is off due to the use of jcarousel within Bootstrap and I'm too lazy to *really* fix it.-->
-                    <?=
-                        /*
-                            This section really needs to be cleaned, will get around to it in a later release.
-                        */
-                        $this->render_partial('shop:product_images');
-                        echo '<hr>
-                                    <div class="row-fluid">
-                                        <div class="span6">';
-                        $this->render_partial('shop:product_options');
-                        echo '</div> <div class="span6">';
-                        $this->render_partial('shop:product_extra_options');
-                        echo '</div>
-                                </div><!--Ending fluid row for options-->
-                                <hr>
-                                <div class="row-fluid">
-                                    <div class="span6">';
-                        $this->render_partial('shop:product_stock_pricing');
-                        echo '</div>
-                                    <div class="span6">';
-                        $this->render_partial('shop:product_add_to_cart');
-                        echo '</div>
-                                    </div><!--Ending fluid row for add to cart-->';
-                    ?>
+            <h2 itemprop="name"><?= $product->name ?></h2>
+            <div class="span12">
+                <?= $this->render_partial('shop:product_images'); ?>
+            </div>
+            <hr>
+            <div class="row-fluid">
+                <div class="span6">
+                    <?= $this->render_partial('shop:product_options'); ?>
+                </div>
+                <div class="span6">
+                    <?= $this->render_partial('shop:product_extra_options'); ?>
+                </div>
+            </div><!--Ending fluid row for options-->
+            <hr>
+            <div class="row-fluid">
+                <div class="span6">
+                    <?= $this->render_partial('shop:product_stock_pricing'); ?>
+                </div>
+                <div class="span6">
+                    <?= $this->render_partial('shop:product_add_to_cart'); ?>
+                </div>
+            </div><!--Ending fluid row for add to cart-->
         </form>
     </div><!--Ending the span for the product form-->
     <div class="span6">

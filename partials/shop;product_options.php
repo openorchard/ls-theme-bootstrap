@@ -4,8 +4,8 @@
     $posted_options = post('product_options', array());
     $posted_value = isset($posted_options[$option->option_key]) ? $posted_options[$option->option_key] : null;
   ?>
-    <label><?= h($option->name) ?>:</label>
-    <select name="<?= $control_name ?>" onchange="$(this).getForm().sendRequest('on_action', {
+    <label class="span12"><?= h($option->name) ?>:</label>
+    <select class="span12" name="<?= $control_name ?>" onchange="$(this).getForm().sendRequest('on_action', {
                                                         onAfterUpdate: init_effects,
                                                         update: {'product_page': 'product_partial'}
                                                       })" >

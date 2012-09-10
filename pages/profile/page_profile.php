@@ -1,4 +1,4 @@
-    <ul id="myTab" class="nav nav-tabs">
+<ul id="myTab" class="nav nav-tabs">
         <li class="active">
             <a href="#main_details" data-toggle="tab">Account Details</a>
         </li>
