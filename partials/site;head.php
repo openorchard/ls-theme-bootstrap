@@ -57,6 +57,7 @@
                 '@js/jquery-1.8.js',
                 'ls_core_jquery',
                 '@js/bootstrap.js',
+                '@js/jquery.toggle.buttons.js',
                 '@js/jquery.jcarousel.min.js',
                 '@js/jquery.fancybox-1.3.4.pack.js',
                 '@js/jquery.livequery.js',

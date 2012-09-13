@@ -33,8 +33,8 @@
                         <div class="span11">
                             <p><b>Shipping cost, taxes and discounts will be evaluated during the checkout process.</b></p>
                                 <div class="span4">
-                                <label for="coupon_code">Do you have a coupon?</label>
-                                    <input id="coupon_code" value="<?= h($coupon_code) ?>" type="text" name="coupon"/>
+                                <label class="span12" for="coupon_code">Do you have a coupon?</label>
+                                    <input class="span12" id="coupon_code" value="<?= h($coupon_code) ?>" type="text" name="coupon"/>
                                     </div>
                                       <div class="span7">
                                       <button class="btn btn-info btn-block" type="submit">Apply Changes</button>

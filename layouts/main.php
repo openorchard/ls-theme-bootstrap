@@ -1,12 +1,5 @@
 <?
-    $this->render_partial('site:head',
-    array()//No partial specific options
-    array(
-        'cache'=>true, //Just turning on caching
-        'cache_vary_by'=>array('url'), //Different head per page due to title being dependent upon the page.
-        'cache_versions'=>array('cms'), //Recache when content in the CMS module is updated.
-        'cache_ttl'=>1800 //This is setting the time to live for the cache if you are using memory based caching.  Filebased will ignore this.
-    ));
+    $this->render_partial('site:head');
     $this->render_partial('main_menu');
 ?>
         <div class="container-fluid"><!--This starts the fluid grid for the page.-->

@@ -39,7 +39,17 @@
       </td>
       <td>
         <input type="hidden" name="item_postponed[<?= $item->key ?>]" value="0"/>
-        <input type="checkbox" <?= checkbox_state($item->postponed) ?> name="item_postponed[<?= $item->key ?>]" value="1"/>
+        <div class="normal-toggle-button">
+            <input type="checkbox" <?= checkbox_state($item->postponed) ?> name="item_postponed[<?= $item->key ?>]" value="1"/>
+        </div>
+        <script>
+            $('.normal-toggle-button').toggleButtons({
+              label: {
+                enabled: "Yes",
+                disabled: "No"
+              }
+            });
+        </script>
       </td>
       <td>
         <? if (!$postponed): ?>
@@ -52,7 +62,23 @@
           <?= $item->quantity ?>
         <? endif ?>
       </td>
-      <td><input type="checkbox" name="delete_item[]" value="<?= $item->key ?>"/></td>
+      <td>
+          <div class="delete-toggle-button">
+              <input type="checkbox" name="delete_item[]" value="<?= $item->key ?>"/>
+          </div>
+          <script>
+              $('.delete-toggle-button').toggleButtons({
+                style: {
+                  enabled: "danger",
+                  disabled: "info"
+                },
+                label: {
+                  enabled: "Yes",
+                  disabled: "No"
+                }
+              });
+          </script>
+        </td>
       <td><?= format_currency($item->single_price()) ?></td>
       <td><?= format_currency($item->total_discount()) ?></td>
       <th><?= format_currency($item->total_price()) ?></th>

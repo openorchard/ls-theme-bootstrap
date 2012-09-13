@@ -1,9 +1,9 @@
 /*===[Style from Bootstrap]===*/
 /**
 
-This style area is what comes inline by default with bootstrap.
+This style area is what comes inline by default with Bootstrap's responsive layout.
 You should only edit this styling if you *know* you need to, otherwise leave it alone just like the rest of the bootstrap css.
-
+It is before the main Bootstrap file due to some media query weirdness.
 **/
 
       body

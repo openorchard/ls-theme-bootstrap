@@ -54,8 +54,18 @@
 </div>
 <br>
 <br>
-<label>Ship to the billing address</label>
-<input type="checkbox" name="ship_to_billing_address" value="1"/>
+<label>Ship to the billing address?</label>
+<span class="shipping_toggle_checkbox">
+    <input type="checkbox" name="ship_to_billing_address" value="1"/>
+</span>
+<script>
+    $('.shipping_toggle_checkbox').toggleButtons({
+    label: {
+        enabled: "Yes",
+        disabled: "No"
+    }
+    });
+</script>
 <br>
 <br>
 <input type="hidden" name="checkout_step" value="<?= $checkout_step ?>"/>
