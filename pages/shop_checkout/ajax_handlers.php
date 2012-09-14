@@ -19,14 +19,21 @@ $controller->action();
 
 function place_order_and_pay($controller, $page, $params)
 {
-Shop_CheckoutData::set_payment_method(Shop_PaymentMethod::find_by_api_code('default')->id);
- 
-// Call the default action handler
-$controller->action();
- 
-// Pretend that we are on the Review checkout step
-// to force LemonStand to place the order
-$_POST['checkout_step'] = 'review';
-$controller->action();
+ $payment_method = Shop_PaymentMethod::find_by_api_code('default');
+ if($payment_method)
+ {
+  Shop_CheckoutData::set_payment_method(Shop_PaymentMethod::find_by_api_code('default')->id);
+ }else
+ {
+  throw new Phpr_ApplicationException('There is no default payment method set.');
+ }
+  
+ // Call the default action handler
+ $controller->action();
+  
+ // Pretend that we are on the Review checkout step
+ // to force LemonStand to place the order
+ $_POST['checkout_step'] = 'review';
+ $controller->action();
 }
 ?>
